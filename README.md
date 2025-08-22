@@ -1,3 +1,3 @@
-# KnowledgeBase
+# Trickster
 
-[Deploy SpinVibe](https://franticus.github.io/KnowledgeBase/)
+[Deploy SpinVibe](https://franticus.github.io/Trickster/)
