@@ -1,0 +1,50 @@
+.icons-wrapper {
+	padding: 30px 0;
+	display: flex;
+	column-gap: 30px;
+}
+
+.icon {
+	fill: transparent;
+	stroke: transparent;
+	width: 24px;
+	height: 24px;
+}
+
+.icon--icon_cap,
+.icon--icon_desk,
+.icon--icon_message {
+	fill: var(--text-color-dark);
+	stroke: var(--text-color-dark);
+	width: 76px;
+	height: 76px;
+
+	@include mobile {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.icon--icon_i,
+.icon--icon_shield {
+	stroke: var(--text-color-dark);
+	width: 76px;
+	height: 76px;
+	color: var(--text-color-dark);
+
+	@include mobile {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.icon--arrow {
+	stroke: var(--text-color-dark);
+	width: 16px;
+	height: 26px;
+
+	@include mobile {
+		width: 40px;
+		height: 40px;
+	}
+}

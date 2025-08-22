@@ -1,0 +1,33 @@
+<section class="form container" id="contacts">
+	<h2 class="form__title">
+		<p>Ask about</p>
+		<p>Avaliability</p>
+	</h2>
+
+	<div class="form__wrapper">
+		<div class="text">
+			<p class="text__subtitle">For any questions or additional information feel free to contact us at</p>
+			<a href="mailto:info@knowledgebase.com" class="text__link">info@knowledgebase.com</a>
+		</div>
+
+		<form class="contact__form" action="php/thanks_form.php" method="post">
+			<input type="text" name="name" placeholder="Name" required autocomplete="on">
+			<input type="email" name="email" placeholder="E-mail" required autocomplete="on">
+			<input type="phone" name="phone" placeholder="Phone" required autocomplete="on">
+			<textarea name="message" placeholder="Message" required></textarea>
+			<div class="contact__form-text">
+				<span>By clicking the "Send Message" button, you confirm your <br class="mobileOnly"> consent to the processing
+					of <br class="desktopOnly"> personal data and
+					agree to the <a href="privacy-policy.html">privacy policy</a></span>
+			</div>
+
+			<button class="main__button">
+				<span class="main__button-text">
+					Send the message
+				</span>
+			</button>
+		</form>
+	</div>
+
+
+</section>

@@ -1,0 +1,32 @@
+.header {
+	display: flex;
+	align-items: center;
+	// padding: 15px 0;
+	height: 80px;
+	padding-bottom: 0;
+	font-family: var(--font-accent);
+	position: relative;
+
+	.container {
+		@include mobile {
+			padding: 0 10px;
+		}
+	}
+
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 20px;
+	}
+}
+
+.header__logo {
+	font-weight: 600;
+	font-size: 24px;
+	letter-spacing: -0.04em;
+	color: var(--text-color);
+	position: relative;
+	z-index: 999;
+}

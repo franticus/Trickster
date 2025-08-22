@@ -1,0 +1,93 @@
+@keyframes pulse {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+		transform-origin: center center;
+	}
+
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.95);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(1.1);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(0.90);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(1.1);
+	}
+}
+
+@keyframes pulseSize {
+	0% {
+		width: 16px;
+		height: 16px;
+	}
+
+	10% {
+		width: 14.5px;
+		height: 14.5px;
+	}
+
+	17% {
+		width: 17.5px;
+		height: 17.5px;
+	}
+
+	33% {
+		width: 13.5px;
+		height: 13.5px;
+	}
+
+	45% {
+		width: 18px;
+		height: 18px;
+	}
+
+	100% {
+		width: 16px;
+		height: 16px;
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes upDown {
+	0% {
+		transform: translateY(-20px);
+	}
+
+	100% {
+		transform: translateY(20px);
+	}
+}
+
+@keyframes scrollBg {
+	0% {
+		background-position: 50% 0;
+	}
+
+	50% {
+		background-position: 50% 40%;
+	}
+
+	100% {
+		background-position: 50% 0;
+	}
+}

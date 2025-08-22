@@ -1,0 +1,27 @@
+:root {
+	--container-width: 1600px;
+	--container-padding: 100px;
+
+	--font-main: sans-serif;
+	--font-accent: "Neue", sans-serif;
+	--font-second: "Inter", sans-serif;
+	--font-titles: var(--font-accent);
+
+	--page-bg: #FFF;
+	--text-color: #f7f6f2;
+	--text-color-dark: #121212;
+	--accent: #FFE26A;
+	--accent-dark: #121212;
+	--accent-light: #0F6DA7;
+	--link-color: #7C0000;
+
+
+	--laptop-size: 1600px;
+	--tablet-size: 768px;
+	--mobile-size: 468px;
+}
+
+// .dark {
+// 	--page-bg: #252526;
+// 	--text-color: #fff;
+// }

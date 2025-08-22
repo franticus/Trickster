@@ -1,0 +1,55 @@
+.hero {
+	font-family: var(--font-accent);
+	position: relative;
+	width: 100vw;
+	max-width: 1600px;
+	margin: 0 auto;
+	margin-top: -80px;
+	overflow: hidden;
+
+	.container {
+		padding: 150px 100px 100px 100px;
+		background-color: var(--accent);
+		background-color: #999;
+		background-image: url('../../img/hero/hero.jpg');
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		@include mobile {
+			padding: 140px 10px 90px 10px;
+		}
+	}
+
+	&__line {
+		height: 78px;
+		width: 1px;
+		background: #f7f6f2;
+		margin: 0 auto;
+		margin-top: 60px;
+		margin-bottom: 70px;
+
+		animation: upDown 2s infinite ease-in-out;
+		animation-direction: alternate;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 120px;
+		line-height: 105%;
+		text-transform: uppercase;
+		text-align: center;
+		color: var(--text-color);
+		margin-bottom: 60px;
+
+		@include tablet {
+			font-size: 80px;
+			margin-bottom: 40px;
+		}
+
+		@include mobile {
+			font-size: 35px;
+			margin-bottom: 20px;
+		}
+	}
+}

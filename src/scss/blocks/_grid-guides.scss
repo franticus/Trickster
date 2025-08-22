@@ -1,0 +1,32 @@
+.grid-guides {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100vh;
+	max-width: 1600px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 var(--container-padding);
+	pointer-events: none;
+	z-index: 9999;
+	opacity: 0.3;
+
+	display: none;
+
+	@include mobile {
+		padding: 0 10px;
+
+		&-hide {
+			display: none;
+		}
+	}
+}
+
+.grid-guide-column {
+	flex: 1;
+	border: 1px solid red;
+	margin: 0;
+}
