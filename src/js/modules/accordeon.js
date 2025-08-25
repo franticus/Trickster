@@ -5,8 +5,8 @@ export default function accordeon(options = {}) {
     headerSelector: '.accordeon__item__top',
     panelSelector: '.accordeon__item__main',
     closeBtnSelector: '.accordeon__item__header__cross',
-    singleOpen: true, // всегда один открыт
-    openFirst: true, // открыть первый при инициализации
+    singleOpen: true,
+    openFirst: true,
     ...options,
   };
 
@@ -18,15 +18,15 @@ export default function accordeon(options = {}) {
     .map(i => i.querySelector(cfg.panelSelector))
     .filter(Boolean);
 
-  // свернули всё
+  // сворачиваем всё
   panels.forEach(p => {
     p.style.overflow = 'hidden';
     p.style.height = '0px';
-    p.style.transition = 'height 0.35s ease';
+    p.style.transition = 'height 0.5s ease-in-out';
     p.setAttribute('aria-hidden', 'true');
   });
   items.forEach(item => {
-    item.style.overflow = ''; // дефолт
+    item.style.overflow = '';
     item.setAttribute('aria-expanded', 'false');
   });
 
@@ -41,7 +41,7 @@ export default function accordeon(options = {}) {
     if (panel) panel.style.overflow = 'visible';
   };
   const setOverflowClosed = item => {
-    item.style.overflow = ''; // возврат к стилям по умолчанию
+    item.style.overflow = '';
     const panel = item.querySelector(cfg.panelSelector);
     if (panel) panel.style.overflow = 'hidden';
   };
@@ -50,7 +50,7 @@ export default function accordeon(options = {}) {
     const panel = item.querySelector(cfg.panelSelector);
     if (!panel || !isOpen(item)) return;
 
-    item.classList.remove('is-open');
+    item.classList.remove('is-open'); // top снова покажется
     item.setAttribute('aria-expanded', 'false');
     setOverflowClosed(item);
 
@@ -75,7 +75,7 @@ export default function accordeon(options = {}) {
     }
     if (isOpen(item)) return;
 
-    item.classList.add('is-open');
+    item.classList.add('is-open'); // top сворачивается
     item.setAttribute('aria-expanded', 'true');
     setOverflowClosed(item);
 
@@ -91,7 +91,7 @@ export default function accordeon(options = {}) {
     const onEnd = e => {
       if (e.propertyName !== 'height') return;
       panel.style.height = 'auto';
-      setOverflowOpen(item); // 👈 у открытого всё видно
+      setOverflowOpen(item);
       panel.setAttribute('aria-hidden', 'false');
       panel.removeEventListener('transitionend', onEnd);
     };
@@ -123,7 +123,7 @@ export default function accordeon(options = {}) {
       requestAnimationFrame(() => {
         panel.style.height = 'auto';
       });
-      setOverflowOpen(item); // гарантируем visible на ресайзе
+      setOverflowOpen(item);
     });
   });
 

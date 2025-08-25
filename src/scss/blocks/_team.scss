@@ -31,9 +31,15 @@
 				padding: 20px 0;
 				border-bottom: 1px solid rgba(42, 42, 42, 0.3);
 
+				max-height: 64px;
+				opacity: 1;
+				overflow: hidden;
+				transition: max-height 0.35s ease, opacity 0.25s ease;
+
 				@include mobile {
 					padding: 15px 0;
 					grid-template-columns: repeat(2, 1fr);
+					max-height: 100px;
 				}
 
 				&__nick {
@@ -81,7 +87,7 @@
 						justify-self: end;
 						width: 16px;
 						height: 16px;
-						transform: scale(1.4);
+						transform: scale(1.4) translate(-4px, 4px);
 					}
 				}
 			}
@@ -193,6 +199,7 @@
 				position: relative;
 				display: flex;
 				align-items: center;
+				pointer-events: none;
 				justify-content: center;
 				margin: 0 auto;
 				font-weight: 400;
@@ -211,5 +218,11 @@
 				}
 			}
 		}
+	}
+
+	.accordeon__item.is-open .accordeon__item__top {
+		max-height: 0;
+		opacity: 0;
+		padding: 0;
 	}
 }
