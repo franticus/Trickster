@@ -1,10 +1,12 @@
 .team {
 	font-family: var(--font-accent);
 	background-color: var(--accent-dark);
+	color: var(--text-color);
 
 	.accordeon {
 		background-color: var(--accent);
 		padding: 20px;
+		padding-bottom: 0;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 
@@ -16,7 +18,6 @@
 			font-size: 16px;
 			line-height: 120%;
 			letter-spacing: -0.04em;
-			color: var(--text-color);
 
 			&__header {
 				display: grid;
@@ -24,6 +25,7 @@
 				justify-content: space-between;
 				align-items: flex-start;
 				cursor: pointer;
+				margin-bottom: 60px;
 
 				&__nick {
 					grid-column: 1;
@@ -55,6 +57,20 @@
 					justify-self: end;
 					width: 23px;
 					height: 23px;
+				}
+			}
+
+			&__content {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 0 auto;
+				font-weight: 400;
+				font-size: 200px;
+				line-height: 120%;
+
+				&__name {
+					font-family: var(--font-third);
 				}
 			}
 		}
