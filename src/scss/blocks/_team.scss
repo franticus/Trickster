@@ -1,0 +1,62 @@
+.team {
+	font-family: var(--font-accent);
+	background-color: var(--accent-dark);
+
+	.accordeon {
+		background-color: var(--accent);
+		padding: 20px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+
+		&__item {
+			grid-column: 1 / -1;
+			display: flex;
+			flex-direction: column;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 120%;
+			letter-spacing: -0.04em;
+			color: var(--text-color);
+
+			&__header {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				justify-content: space-between;
+				align-items: flex-start;
+				cursor: pointer;
+
+				&__nick {
+					grid-column: 1;
+					white-space: nowrap;
+				}
+
+				&__old {
+					grid-column: 2;
+					grid-row: 1;
+					justify-self: start;
+					margin-left: -10px;
+				}
+
+				&__img {
+					grid-column: 2;
+					grid-row: 1;
+					justify-self: end;
+					width: 180px;
+					padding-right: 20px;
+				}
+
+				&__text {
+					grid-column: 3;
+					max-width: 300px;
+				}
+
+				&__cross {
+					grid-column: 4;
+					justify-self: end;
+					width: 23px;
+					height: 23px;
+				}
+			}
+		}
+	}
+}

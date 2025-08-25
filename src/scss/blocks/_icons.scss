@@ -11,13 +11,10 @@
 	height: 24px;
 }
 
-.icon--icon_cap,
-.icon--icon_desk,
-.icon--icon_message {
-	fill: var(--text-color-dark);
+.icon--plus {
 	stroke: var(--text-color-dark);
-	width: 76px;
-	height: 76px;
+	width: 16px;
+	height: 26px;
 
 	@include mobile {
 		width: 40px;
@@ -25,21 +22,8 @@
 	}
 }
 
-.icon--icon_i,
-.icon--icon_shield {
-	stroke: var(--text-color-dark);
-	width: 76px;
-	height: 76px;
-	color: var(--text-color-dark);
-
-	@include mobile {
-		width: 40px;
-		height: 40px;
-	}
-}
-
-.icon--arrow {
-	stroke: var(--text-color-dark);
+.icon--cross {
+	stroke: var(--text-color);
 	width: 16px;
 	height: 26px;
 
