@@ -18,6 +18,10 @@
 			line-height: 120%;
 			letter-spacing: -0.04em;
 
+			@include mobile {
+				font-size: 14px;
+			}
+
 			&__top {
 				cursor: pointer;
 				display: grid;
@@ -39,6 +43,7 @@
 				}
 
 				&__name {
+					font-weight: 500;
 					grid-column: 3;
 				}
 
@@ -56,7 +61,6 @@
 				transition: height 0.35s ease;
 			}
 
-
 			&__header {
 				display: grid;
 				grid-template-columns: repeat(4, 1fr);
@@ -66,9 +70,27 @@
 				padding: 20px;
 				margin-bottom: 60px;
 
+				@include tablet {
+					margin-bottom: 20px;
+				}
+
+				@include mobile {
+					grid-template-columns: repeat(2, 1fr);
+					padding: 15px;
+				}
+
 				&__nick {
-					grid-column: 1;
 					white-space: nowrap;
+
+					@include tablet {
+						white-space: normal;
+						padding-right: 20px;
+					}
+
+					@include mobile {
+						grid-column: 1 / -1;
+						grid-row: 1;
+					}
 				}
 
 				&__old {
@@ -76,19 +98,47 @@
 					grid-row: 1;
 					justify-self: start;
 					margin-left: -10px;
+
+					@include mobile {
+						grid-column: 1 / -1;
+						grid-row: 2;
+						margin-left: 0px;
+					}
 				}
 
 				&__img {
 					grid-column: 2;
 					grid-row: 1;
 					justify-self: end;
-					width: 180px;
+					width: 100%;
+					max-width: 180px;
 					padding-right: 20px;
+
+					@include tablet {
+						padding-top: 30px;
+						max-width: 270px;
+					}
+
+					@include mobile {
+						grid-column: 1 / -1;
+						grid-row: 3;
+						justify-self: start;
+						padding-top: 10px;
+						padding-bottom: 10px;
+						padding-right: 0px;
+						max-width: 100%;
+					}
 				}
 
 				&__text {
 					grid-column: 3;
 					max-width: 300px;
+
+					@include mobile {
+						grid-column: 1 / -1;
+						grid-row: 4;
+						max-width: 100%;
+					}
 				}
 
 				&__cross {
@@ -96,6 +146,15 @@
 					justify-self: end;
 					width: 23px;
 					height: 23px;
+
+					@include mobile {
+						grid-column: 1 / -1;
+						grid-row: 1;
+						justify-self: end;
+						width: 16px;
+						height: 16px;
+						transform: scale(1.4);
+					}
 				}
 			}
 
@@ -108,9 +167,16 @@
 				font-weight: 400;
 				font-size: 200px;
 				line-height: 120%;
+				font-family: var(--font-third);
+				white-space: nowrap;
+				border-bottom: 1px solid rgba(42, 42, 42, 0.3);
 
-				&__name {
-					font-family: var(--font-third);
+				@include tablet {
+					font-size: 100px;
+				}
+
+				@include tablet {
+					font-size: 40px;
 				}
 			}
 		}
