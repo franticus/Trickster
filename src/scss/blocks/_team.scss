@@ -24,7 +24,7 @@
 				grid-template-columns: repeat(4, 1fr);
 				color: rgba(42, 42, 42, 0.8);
 				background-color: var(--accent-dark);
-				padding: 20px;
+				padding: 20px 0;
 				border-bottom: 1px solid rgba(42, 42, 42, 0.3);
 
 				&__nick {
@@ -75,6 +75,7 @@
 					grid-column: 2;
 					grid-row: 1;
 					justify-self: start;
+					margin-left: -10px;
 				}
 
 				&__img {
