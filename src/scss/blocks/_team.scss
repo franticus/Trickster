@@ -31,20 +31,42 @@
 				padding: 20px 0;
 				border-bottom: 1px solid rgba(42, 42, 42, 0.3);
 
+				@include mobile {
+					padding: 15px 0;
+					grid-template-columns: repeat(2, 1fr);
+				}
+
 				&__nick {
 					grid-column: 1;
 					white-space: nowrap;
+
+					@include mobile {
+						grid-column: 1 / -1;
+						grid-row: 1;
+					}
 				}
 
 				&__old {
 					grid-column: 2;
 					grid-row: 1;
 					justify-self: start;
+
+					@include mobile {
+						grid-column: 1 / -1;
+						grid-row: 2;
+					}
 				}
 
 				&__name {
 					font-weight: 500;
 					grid-column: 3;
+
+					@include mobile {
+						grid-column: 1 / -1;
+						grid-row: 3;
+						font-size: 18px;
+						margin-top: 10px;
+					}
 				}
 
 				&__plus {
@@ -52,6 +74,15 @@
 					justify-self: end;
 					width: 23px;
 					height: 23px;
+
+					@include mobile {
+						grid-column: 1 / -1;
+						grid-row: 1;
+						justify-self: end;
+						width: 16px;
+						height: 16px;
+						transform: scale(1.4);
+					}
 				}
 			}
 
