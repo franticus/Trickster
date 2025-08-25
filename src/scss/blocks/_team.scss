@@ -5,7 +5,6 @@
 
 	.accordeon {
 		background-color: var(--accent);
-		padding: 20px;
 		padding-bottom: 0;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
@@ -19,12 +18,52 @@
 			line-height: 120%;
 			letter-spacing: -0.04em;
 
+			&__top {
+				cursor: pointer;
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				color: rgba(42, 42, 42, 0.8);
+				background-color: var(--accent-dark);
+				padding: 20px;
+				border-bottom: 1px solid rgba(42, 42, 42, 0.3);
+
+				&__nick {
+					grid-column: 1;
+					white-space: nowrap;
+				}
+
+				&__old {
+					grid-column: 2;
+					grid-row: 1;
+					justify-self: start;
+				}
+
+				&__name {
+					grid-column: 3;
+				}
+
+				&__plus {
+					grid-column: 4;
+					justify-self: end;
+					width: 23px;
+					height: 23px;
+				}
+			}
+
+			&__main {
+				overflow: hidden;
+				height: 0;
+				transition: height 0.35s ease;
+			}
+
+
 			&__header {
 				display: grid;
 				grid-template-columns: repeat(4, 1fr);
 				justify-content: space-between;
 				align-items: flex-start;
 				cursor: pointer;
+				padding: 20px;
 				margin-bottom: 60px;
 
 				&__nick {
@@ -36,7 +75,6 @@
 					grid-column: 2;
 					grid-row: 1;
 					justify-self: start;
-					margin-left: -10px;
 				}
 
 				&__img {
