@@ -8,7 +8,7 @@
 	overflow: hidden;
 
 	.container {
-		padding: 150px 100px 100px 100px;
+		padding: 150px 100px 45px 100px;
 		background-color: var(--accent);
 		background-color: #999;
 		background-image: url('../../img/hero/hero.jpg');
@@ -17,20 +17,88 @@
 		background-repeat: no-repeat;
 
 		@include mobile {
-			padding: 140px 10px 90px 10px;
+			padding: 100px 10px 65px 10px;
+		}
+	}
+
+	&__lines {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		@include mobile {
+			margin: 40px auto;
+		}
+
+		&-text {
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 110%;
+			letter-spacing: -0.04em;
+			text-transform: uppercase;
+			color: rgba(255, 255, 255, 0.7);
+
+			@include mobile {
+				font-size: 12px;
+			}
+		}
+
+		&-left {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			width: 25%;
+
+			& div:nth-child(1) {
+				text-align: left;
+			}
+
+			& div:nth-child(2) {
+				text-align: center;
+			}
+
+			& div:nth-child(3) {
+				text-align: right;
+			}
+		}
+
+		&-right {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			width: 25%;
+
+			& div:nth-child(1) {
+				text-align: right;
+			}
+
+			& div:nth-child(2) {
+				text-align: center;
+			}
+
+			& div:nth-child(3) {
+				text-align: left;
+			}
+		}
+
+		&-left,
+		&-right {
+			@include mobile {
+				gap: 0;
+			}
 		}
 	}
 
 	&__line {
-		height: 78px;
+		height: 155px;
 		width: 1px;
-		background: #f7f6f2;
-		margin: 0 auto;
-		margin-top: 60px;
-		margin-bottom: 70px;
+		background: rgba(255, 255, 255, 0.3);
+		transform: translateY(-40px);
 
-		animation: upDown 2s infinite ease-in-out;
-		animation-direction: alternate;
+		@include mobile {
+			height: 115px;
+			transform: translateY(0px);
+		}
 	}
 
 	&__title {
@@ -42,16 +110,28 @@
 		text-align: center;
 		color: #fff;
 		color: var(--text-color);
-		margin-bottom: 60px;
+		margin-bottom: 80px;
 
 		@include tablet {
 			font-size: 80px;
-			margin-bottom: 40px;
+			margin-bottom: 80px;
 		}
 
 		@include mobile {
 			font-size: 35px;
 			margin-bottom: 20px;
 		}
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 120%;
+		max-width: 300px;
+		margin: 0 auto;
+		letter-spacing: -0.04em;
+		text-align: center;
+		color: var(--text-color);
+		margin-bottom: 30px;
 	}
 }

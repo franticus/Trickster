@@ -47,6 +47,11 @@
 		margin: 10px 0;
 	}
 
+	@include mobile {
+		width: 101px;
+		min-width: 101px;
+	}
+
 	& img {
 		width: 100%;
 	}

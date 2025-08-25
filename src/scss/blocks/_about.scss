@@ -3,15 +3,9 @@
 	background-color: var(--page-bg);
 	position: relative;
 	padding-top: 100px;
-	border-top-left-radius: 90px;
-	border-top-right-radius: 90px;
-	margin-top: -250px;
 
 	@include mobile {
-		border-top-left-radius: 30px;
-		border-top-right-radius: 30px;
 		padding-top: 50px;
-		margin-top: -150px;
 	}
 
 	.content {
