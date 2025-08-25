@@ -9,7 +9,7 @@ function mobileNav() {
   const closeMenu = () => {
     htmlBlock.classList.remove('no-scroll');
     nav.classList.remove('mobile-nav--open');
-    overlay.classList.remove('mobile-nav--open');
+    // overlay.classList.remove('mobile-nav--open');
     menuIcon.classList.remove('nav-icon--active');
     document.body.classList.remove('no-scroll');
   };
@@ -17,7 +17,7 @@ function mobileNav() {
   navBtn.onclick = function() {
     htmlBlock.classList.toggle('no-scroll');
     nav.classList.toggle('mobile-nav--open');
-    overlay.classList.toggle('mobile-nav--open');
+    // overlay.classList.toggle('mobile-nav--open');
     menuIcon.classList.toggle('nav-icon--active');
     document.body.classList.toggle('no-scroll');
   };

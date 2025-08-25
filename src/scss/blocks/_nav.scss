@@ -80,17 +80,17 @@
 .no-scroll .nav__link {
 	transition: all 0.2s ease-in;
 	position: relative;
-	padding: 5px;
-	margin: 10px 0;
-	margin-left: -5px;
+	padding: 15px;
 
 	font-weight: 500;
-	font-size: 20px;
-	line-height: 105%;
-	text-transform: uppercase;
-	color: var(--text-color-dark);
+	font-size: 16px;
+	line-height: 100%;
+	letter-spacing: -0.04em;
+	color: var(--text-color);
+	border: none;
 
 	&:hover {
 		color: var(--text-color-dark);
+		background-color: var(--page-bg);
 	}
 }
