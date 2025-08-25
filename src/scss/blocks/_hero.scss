@@ -34,11 +34,13 @@
 	}
 
 	&__title {
-		font-weight: 500;
+		font-weight: 700;
 		font-size: 120px;
-		line-height: 105%;
+		line-height: 100%;
+		letter-spacing: -0.04em;
 		text-transform: uppercase;
 		text-align: center;
+		color: #fff;
 		color: var(--text-color);
 		margin-bottom: 60px;
 
