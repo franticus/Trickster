@@ -11,6 +11,10 @@
 	.container {
 		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
+		@include tablet {
+			border: none;
+		}
+
 		@include mobile {
 			padding: 0 10px;
 		}
@@ -36,6 +40,12 @@
 	min-width: 141px;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	padding: 16px 20px;
+
+	@include tablet {
+		border: none;
+		padding: 0;
+		margin: 10px 0;
+	}
 
 	& img {
 		width: 100%;
