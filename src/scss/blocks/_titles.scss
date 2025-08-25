@@ -1,55 +1,31 @@
-.title-1 {
-	margin: 1em 0 0.5em;
-	font-size: 38px;
-	font-weight: 700;
-	font-family: var(--font-titles);
-}
-
-.title-2 {
-	margin: 1em 0 0.5em;
-	font-size: 32px;
-	font-weight: 700;
-	font-family: var(--font-titles);
-}
-
-.title-3 {
-	margin: 1em 0 0.5em;
-	font-size: 26px;
-	font-weight: 700;
-	font-family: var(--font-titles);
-}
-
-.title-4 {
-	margin: 1em 0 0.5em;
-	font-size: 18px;
-	font-weight: 700;
-	font-family: var(--font-titles);
-}
-
 .title__wrapper {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 
 	@include mobile {
-		display: flex;
-		flex-direction: column;
+		align-items: flex-start;
 	}
 }
 
 .title {
-	grid-column: 2 / -1;
+	max-width: 1110px;
 	position: relative;
-	font-weight: 500;
-	font-size: 55px;
-	line-height: 105%;
+	font-weight: 600;
+	font-size: 50px;
+	line-height: 110%;
+	letter-spacing: -0.04em;
 	text-transform: uppercase;
-	color: #121212;
+	text-align: center;
+	color: #2a2a2a;
 	color: var(--text-color-dark);
 	width: fit-content;
 	// white-space: nowrap;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 
 	@include mobile {
+		text-align: left;
 		font-size: 20px;
 		margin-bottom: 20px;
 	}
@@ -57,19 +33,22 @@
 
 .subtitle {
 	grid-column: 1 / 2;
-	margin-right: 10px;
 	white-space: nowrap;
 
 	& span {
+		padding: 12px 30px;
 		display: inline-block;
 		border-radius: 100px;
-		border: 1px solid var(--text-color-dark);
-		color: var(--text-color-dark);
-		padding: 10px 20px;
-		font-weight: 500;
-		font-size: 20px;
+		font-weight: 600;
+		font-size: 16px;
 		line-height: 100%;
-		text-transform: uppercase;
+		letter-spacing: -0.04em;
+		text-transform: lowercase;
+		text-align: center;
+		color: #2a2a2a;
+		border-radius: 100%;
+		background: rgba(255, 255, 255, 0.3);
+		margin-bottom: 20px;
 
 		@include mobile {
 			font-size: 12px;
