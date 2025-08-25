@@ -16,6 +16,20 @@
 		border: 1px solid rgba(42, 42, 42, 0.3);
 		max-width: 264px;
 
+		&__wrapper {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+
+			&.second {
+				justify-content: center;
+			}
+
+			&.fourth {
+				justify-content: center;
+			}
+		}
+
 		&__title {
 			font-weight: 500;
 			font-size: 18px;
@@ -32,6 +46,10 @@
 			letter-spacing: -0.04em;
 			color: rgba(42, 42, 42, 0.8);
 		}
+	}
+
+	.center {
+		align-self: end;
 	}
 
 	& img {
