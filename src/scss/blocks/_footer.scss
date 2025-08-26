@@ -650,3 +650,12 @@ li:hover .icon--arrow {
 		}
 	}
 }
+
+.footer__links.main li {
+	transition: opacity .2s;
+	cursor: pointer;
+}
+
+.footer__links.main:has(li:hover) li:not(:hover) {
+	opacity: .4;
+}

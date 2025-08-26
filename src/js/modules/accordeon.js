@@ -132,14 +132,33 @@ export default function accordeon(options = {}) {
   }
 
   // клик по ссылкам в li
-  const listItems = document.querySelectorAll('.footer__links.main li');
-  listItems.forEach(li => {
-    li.addEventListener('click', e => {
-      if (e.target.tagName.toLowerCase() !== 'a') {
-        const link = li.querySelector('a');
-        if (link && link.href) {
-          window.open(link.href, link.target || '_self');
-        }
+  const list = document.querySelector('.footer__links.main');
+
+  list.addEventListener('click', e => {
+    const li = e.target.closest('li');
+    if (!li) return;
+
+    const a = li.querySelector('a[href]');
+    if (!a) return;
+    if (e.target.closest('a')) return;
+
+    const openInNew =
+      e.metaKey || e.ctrlKey || e.button === 1 || a.target === '_blank';
+    if (openInNew) {
+      a.rel ||= 'noopener';
+      window.open(a.href, a.target || '_blank');
+    } else {
+      a.click();
+    }
+  });
+
+  // доступность с клавиатуры
+  list.querySelectorAll('li').forEach(li => {
+    li.tabIndex = 0;
+    li.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        li.querySelector('a[href]')?.click();
       }
     });
   });
