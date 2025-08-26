@@ -1,7 +1,7 @@
 function mobileNav() {
   const navBtn = document.querySelector('.mobile-nav-btn');
   const nav = document.querySelector('.mobile-nav');
-  const overlay = document.querySelector('.overlay');
+  // const overlay = document.querySelector('.overlay');
   const menuIcon = document.querySelector('.nav-icon');
   const navLinks = document.querySelectorAll('.mobile-nav a');
   const htmlBlock = document.querySelector('.html');
