@@ -290,6 +290,19 @@
         </div>
       </section>
       <footer class="footer">
+        <div class="builds">
+          <div class="pack pack-1">
+            <div class="build build-1"></div>
+            <div class="build build-2"></div>
+          </div>
+          <div class="build build-3"></div>
+          <div class="pack pack-2">
+            <div class="build build-4"></div>
+            <div class="build build-5"></div>
+          </div>
+          <div class="build build-6"></div>
+          <div class="build build-7"></div>
+        </div>
         <div class="container">
           <div class="footer__header">
             <div class="footer__subtitle">
@@ -302,30 +315,25 @@
             </div>
           </div>
           <div class="footer__links">
-            <ul class="footer__links main">
-              <li class="li_logo">
-                <div class="li_logo_text">
-                  Have questions, feedback, or just want to say hello? Our team is always ready to assist you. Reach out to us via email, social media, or join
-                  our community for exclusive updates and tips.
+            <div class="li_logo">
+              <div class="li_logo_text">
+                Have questions, feedback, or just want to say hello? Our team is always ready to assist you. Reach out to us via email, social media, or join
+                our community for exclusive updates and tips.
+              </div>
+              <form class="contact__form" action="php/thanks_form.php" method="post">
+                <input type="email" name="email" placeholder="E-mail" required autocomplete="on" />
+                <input type="text" name="message" placeholder="Message" required autocomplete="on" />
+                <div class="contact__form-text">
+                  <span
+                    >By clicking the "Send Message" button, you confirm your<br class="mobileOnly" />
+                    consent to the processing of<br class="desktopOnly" />
+                    personal data and agree to the <a href="privacy-policy.html">privacy policy</a></span
+                  >
                 </div>
-                <form class="contact__form" action="php/thanks_form.php" method="post">
-                  <input type="text" name="name" placeholder="Name" required autocomplete="on" />
-                  <input type="email" name="email" placeholder="E-mail" required autocomplete="on" />
-                  <input type="phone" name="phone" placeholder="Phone" required autocomplete="on" /><textarea
-                    name="message"
-                    placeholder="Message"
-                    required
-                  ></textarea>
-                  <div class="contact__form-text">
-                    <span
-                      >By clicking the "Send Message" button, you confirm your<br class="mobileOnly" />
-                      consent to the processing of<br class="desktopOnly" />
-                      personal data and agree to the <a href="privacy-policy.html">privacy policy</a></span
-                    >
-                  </div>
-                  <button class="main__button"><span class="main__button-text">Send the message</span></button>
-                </form>
-              </li>
+                <button class="main__button transparent"><span class="main__button-text">Send the message</span></button>
+              </form>
+            </div>
+            <ul class="footer__links main">
               <li><a href="https://www.facebook.com/" target="_blank" class="footer__link">[ Facebook ]</a></li>
               <li><a href="https://www.instagram.com/" target="_blank" class="footer__link">[ Instagram ]</a></li>
               <li>
