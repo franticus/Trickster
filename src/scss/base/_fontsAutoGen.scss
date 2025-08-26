@@ -1,11 +1,4 @@
 @font-face {
-  font-family: "F563";
-  font-display: swap;
-  src: url("../fonts/F563-Regular.woff2") format("woff2"), url("../fonts/F563-Regular.woff") format("woff"), url("../fonts/F563-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "Impact";
   font-display: swap;
   src: url("../fonts/Impact-Regular.woff") format("woff");
@@ -57,7 +50,7 @@
 @font-face {
   font-family: "SimpleTags";
   font-display: swap;
-  src: url("../fonts/SimpleTags.woff2") format("woff2"), url("../fonts/SimpleTags.woff") format("woff"), url("../fonts/SimpleTags.ttf") format("truetype"), url("../fonts/SimpleTags.otf") format("opentype");
+  src: url("../fonts/SimpleTags.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
