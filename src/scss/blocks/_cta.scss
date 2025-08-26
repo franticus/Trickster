@@ -24,6 +24,7 @@
 
 		@include mobile {
 			padding: 0px 10px;
+			padding-top: 30px;
 		}
 	}
 
@@ -38,6 +39,8 @@
 
 		@include mobile {
 			padding: 0px 10px;
+			position: relative;
+			top: 0;
 		}
 
 		&-subtitle {
@@ -48,6 +51,12 @@
 			line-height: 120%;
 			letter-spacing: -0.04em;
 			text-align: center;
+
+			@include mobile {
+				grid-column: 1/ -1;
+				grid-row: 1;
+				margin-bottom: 20px;
+			}
 		}
 
 		&-img {
@@ -56,6 +65,14 @@
 			justify-self: end;
 			margin-bottom: 10px;
 			width: 100%;
+
+			@include mobile {
+				grid-column: 1/ -1;
+				grid-row: 3;
+				max-width: 194px;
+				justify-self: center;
+				margin-top: 10px;
+			}
 
 			& img {
 				width: 100%;
@@ -81,6 +98,10 @@
 			grid-column: 1;
 			grid-row: 1;
 
+			@include mobile {
+				grid-row: 2;
+			}
+
 			& div:nth-child(1) {
 				text-align: left;
 			}
@@ -88,11 +109,19 @@
 			& div:nth-child(2) {
 				text-align: left;
 				margin-left: 20px;
+
+				@include mobile {
+					margin-left: 10px;
+				}
 			}
 
 			& div:nth-child(3) {
 				text-align: left;
 				margin-left: 40px;
+
+				@include mobile {
+					margin-left: 20px;
+				}
 			}
 		}
 
@@ -102,6 +131,10 @@
 			grid-column: 4;
 			grid-row: 2;
 
+			@include mobile {
+				grid-row: 4;
+			}
+
 			& div:nth-child(1) {
 				text-align: right;
 			}
@@ -109,11 +142,19 @@
 			& div:nth-child(2) {
 				text-align: right;
 				margin-right: 20px;
+
+				@include mobile {
+					margin-right: 10px;
+				}
 			}
 
 			& div:nth-child(3) {
 				text-align: right;
 				margin-right: 40px;
+
+				@include mobile {
+					margin-right: 20px;
+				}
 			}
 		}
 
@@ -146,14 +187,20 @@
 			justify-content: center;
 			gap: 30px;
 			padding: 280px 0;
+
+			@include mobile {
+				padding-top: 20px;
+				padding-bottom: 45px;
+				gap: 15px;
+			}
 		}
 
 		@include tablet {
-			font-size: 80px;
+			font-size: 60px;
 		}
 
 		@include mobile {
-			font-size: 35px;
+			font-size: 20px;
 		}
 	}
 
@@ -167,5 +214,9 @@
 		margin: 0 auto;
 		text-align: center;
 		color: var(--text-color);
+
+		@include mobile {
+			font-size: 14px;
+		}
 	}
 }
