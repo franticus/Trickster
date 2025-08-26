@@ -104,7 +104,7 @@
 }
 
 .footer__copyright {
-	margin-top: 30px;
+	margin-top: 75px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	width: 100%;
@@ -116,7 +116,7 @@
 	white-space: nowrap;
 
 	@include tablet_small {
-		margin-top: 30px;
+		margin-top: 45px;
 	}
 
 	@include mobile {
@@ -332,9 +332,11 @@
 			flex-direction: column;
 			gap: 6px;
 			font-size: 16px;
+			margin-bottom: 30px;
 
 			@include mobile {
 				font-size: 14px;
+				margin-bottom: 15px;
 			}
 		}
 
@@ -394,10 +396,9 @@ li:hover .icon--arrow {
 
 .contact__form {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 	grid-column: 1;
 	grid-row: 1 / -1;
-	row-gap: 40px;
 
 	@include mobile {
 		grid-column: 1 / -1;
@@ -411,27 +412,27 @@ li:hover .icon--arrow {
 		font-size: 16px;
 		line-height: 110%;
 		letter-spacing: -0.04em;
-		color: var(--text-color-dark);
-		background-color: var(--page-bg);
+		color: var(--text-color);
+		background-color: #2A2A2A;
 		resize: none;
 		border: none;
 		outline: none;
-		padding: 2px 0 6px 0;
-		border-bottom: 1px solid rgba(18, 18, 18, 0.2);
+		padding: 10px 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 		justify-self: start;
 		align-self: start;
-		width: 95%;
-		height: 24px;
+		width: 100%;
+		margin-bottom: 10px;
 
 		&:focus {
 			outline: none;
 		}
 
 		&::placeholder {
-			font-weight: 500;
+			font-weight: 400;
 			font-size: 16px;
 			line-height: 105%;
-			color: rgba(18, 18, 18, 0.6);
+			color: rgba(255, 255, 255, 0.5);
 		}
 
 		@include mobile {
@@ -448,12 +449,11 @@ li:hover .icon--arrow {
 		font-size: 14px;
 		line-height: 105%;
 		color: rgba(255, 255, 255, 0.2);
-		margin-top: -20px;
+		margin-bottom: 30px;
 
 		@include mobile {
 			grid-template-columns: repeat(1, 1fr);
 			font-size: 12px;
-			margin-top: -5px;
 		}
 
 		& span {
@@ -473,6 +473,6 @@ li:hover .icon--arrow {
 	}
 
 	button {
-		grid-column: 1 / -1;
+		margin: 0;
 	}
 }
