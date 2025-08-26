@@ -390,3 +390,88 @@ li:hover .icon--arrow {
 .footer__links:has(li:hover) li:not(:hover) .icon--arrow {
 	fill: rgba(255, 255, 255, 0.5);
 }
+
+.contact__form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column: 3 / -1;
+	border: 1px solid var(--page-bg);
+	row-gap: 40px;
+
+	@include mobile {
+		grid-column: 1 / -1;
+		row-gap: 20px;
+		width: 100%;
+	}
+
+	& input,
+	textarea {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 110%;
+		letter-spacing: -0.04em;
+		color: var(--text-color-dark);
+		background-color: var(--page-bg);
+		resize: none;
+		border: none;
+		outline: none;
+		padding: 2px 0 6px 0;
+		border-bottom: 1px solid rgba(18, 18, 18, 0.2);
+		justify-self: start;
+		align-self: start;
+		width: 95%;
+		height: 24px;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::placeholder {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 105%;
+			color: rgba(18, 18, 18, 0.6);
+		}
+
+		@include mobile {
+			grid-column: 1 / -1;
+			width: 100%;
+		}
+	}
+
+	&-text {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-column: 1 / -1;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 105%;
+		color: rgba(18, 18, 18, 0.4);
+		margin-top: -20px;
+
+		@include mobile {
+			grid-template-columns: repeat(1, 1fr);
+			font-size: 12px;
+			margin-top: -5px;
+		}
+
+		& span {
+			width: 100%;
+			grid-column: 1 / -1;
+		}
+
+		& a {
+			cursor: pointer;
+			color: rgba(18, 18, 18, 0.4);
+			transition: color 0.2s ease-in;
+
+			&:hover {
+				color: var(--text-color-dark);
+			}
+		}
+	}
+
+	button {
+		grid-column: 1 / -1;
+	}
+}
