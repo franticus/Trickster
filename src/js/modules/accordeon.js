@@ -130,4 +130,17 @@ export default function accordeon(options = {}) {
   if (cfg.openFirst && items[0]) {
     requestAnimationFrame(() => openItem(items[0]));
   }
+
+  // клик по ссылкам в li
+  const listItems = document.querySelectorAll('.footer__links.main li');
+  listItems.forEach(li => {
+    li.addEventListener('click', e => {
+      if (e.target.tagName.toLowerCase() !== 'a') {
+        const link = li.querySelector('a');
+        if (link && link.href) {
+          window.open(link.href, link.target || '_self');
+        }
+      }
+    });
+  });
 }
