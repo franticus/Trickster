@@ -1,0 +1,36 @@
+<svg viewBox="0 0 1386 880" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <!-- Путь со смещенной на 50 единиц левее серединой -->
+  <path id="road-spine"
+        d="M1500 50 H200
+           C120 50 50 100 50 180
+           C50 260 120 310 200 310
+           H1136
+           C1216 310 1286 360 1286 440
+           C1286 520 1216 570 1136 570
+           H200
+           C120 570 50 620 50 700
+           C50 780 120 830 200 830
+           H1500"/>
+</defs>
+
+<!-- Дорога: толщина и скругления максимально близко к оригиналу -->
+<use href="#road-spine"
+     fill="none"
+     stroke="#474747"
+     stroke-width="100"
+     stroke-linecap="round"
+     stroke-linejoin="round"/>
+
+<!-- Пунктир по центру -->
+<use href="#road-spine"
+     fill="none"
+     stroke="#F7C507"
+     stroke-width="3"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-dasharray="24 20"
+     stroke-dashoffset="0">
+  <animate attributeName="stroke-dashoffset" from="0" to="-44" dur="1.6s" repeatCount="indefinite"/>
+</use>
+</svg>
