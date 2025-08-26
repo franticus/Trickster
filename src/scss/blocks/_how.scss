@@ -7,6 +7,14 @@
 	padding: 100px 0 100px 100px;
 	margin: 0 auto;
 
+	@include tablet {
+		padding: 100px 0 100px 100px;
+	}
+
+	@include mobile {
+		padding: 100px 0px 100px 10px;
+	}
+
 	&__title {
 		position: absolute;
 		top: 100px;
@@ -17,15 +25,47 @@
 		text-transform: lowercase;
 		text-align: center;
 		color: #2a2a2a;
+
+		@include tablet {
+			font-size: 14px;
+			position: static;
+			text-align-last: left;
+			margin-bottom: 40px;
+		}
 	}
 
 	&__road {
+		position: relative;
 		margin-left: auto;
 		max-width: 1386px;
 
+		&__wrapper {
+			position: relative;
+		}
+
 		&__board {
 			position: relative;
+			width: 622px;
 			max-width: 622px;
+			min-width: 622px;
+
+			@include tablet {
+				width: 450px;
+				max-width: 450px;
+				min-width: 450px;
+			}
+
+			@include tablet_small {
+				width: 350px;
+				max-width: 350px;
+				min-width: 350px;
+			}
+
+			@include mobile {
+				width: 300px;
+				max-width: 300px;
+				min-width: 300px;
+			}
 
 			&__wrapper {
 				position: absolute;
@@ -36,6 +76,10 @@
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
+			}
+
+			&__wrapper:nth-child(1) {
+				background-color: red;
 			}
 
 			&__text {
@@ -50,12 +94,21 @@
 				justify-content: center;
 				gap: 10px;
 
+				@include tablet {
+					flex-direction: row;
+					justify-content: flex-start;
+				}
+
 				&__index {
 					font-family: var(--font-third);
 					font-weight: 400;
 					font-size: 40px;
 					line-height: 120%;
 					text-align: center;
+
+					@include tablet {
+						font-size: 30px;
+					}
 				}
 
 				&__description {
@@ -66,12 +119,57 @@
 					letter-spacing: -0.04em;
 					text-align: center;
 					max-width: 160px;
+
+					@include tablet {
+						font-size: 14px;
+						width: 200px;
+						max-width: unset;
+						text-align: left;
+					}
 				}
 			}
 		}
 	}
 
-	.how__road__board__wrapper:nth-of-type(2) .how__road__board__text__description {
-		max-width: 220px;
+	.how__road__board__wrapper:nth-of-type(1) {
+		left: 55%;
+		top: 6%;
+	}
+
+	.how__road__board__wrapper:nth-of-type(2) {
+		left: 38%;
+		top: 36%;
+	}
+
+	.how__road__board__wrapper:nth-of-type(3) {
+		left: 55%;
+		top: 66%;
+	}
+
+	.how__road__board__wrapper:nth-of-type(4) {
+		left: 72%;
+		top: 95%;
+	}
+
+	@include mobile {
+		.how__road__board__wrapper:nth-of-type(1) {
+			left: 50%;
+			top: 6%;
+		}
+
+		.how__road__board__wrapper:nth-of-type(2) {
+			left: 50%;
+			top: 36%;
+		}
+
+		.how__road__board__wrapper:nth-of-type(3) {
+			left: 50%;
+			top: 66%;
+		}
+
+		.how__road__board__wrapper:nth-of-type(4) {
+			left: 50%;
+			top: 95%;
+		}
 	}
 }
