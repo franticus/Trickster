@@ -96,6 +96,10 @@
 			text-transform: uppercase;
 			color: #2a2a2a;
 
+			& a {
+				color: #2a2a2a;
+			}
+
 			@include mobile {
 				font-size: 16px;
 			}

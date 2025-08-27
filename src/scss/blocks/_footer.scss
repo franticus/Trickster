@@ -134,7 +134,7 @@
 	grid-template-columns: repeat(4, 1fr);
 	width: 100%;
 	padding: 10px 0;
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 14px;
 	line-height: 105%;
 	color: rgba(247, 246, 242, 0.6);
@@ -158,7 +158,7 @@
 		justify-self: end;
 		width: fit-content;
 		display: inline-block;
-		font-weight: 500;
+		font-weight: 400;
 		font-size: 14px;
 		line-height: 105%;
 		color: rgba(247, 246, 242, 0.6);
@@ -454,7 +454,7 @@ li:hover .icon--arrow {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-column: 1 / -1;
-		font-weight: 500;
+		font-weight: 400;
 		font-size: 14px;
 		line-height: 105%;
 		color: rgba(255, 255, 255, 0.2);
