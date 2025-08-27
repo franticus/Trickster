@@ -18,6 +18,10 @@
 	height: 40px;
 	transition: all 0.2s ease-in;
 
+	@include mobile {
+		max-width: 300px;
+	}
+
 	&-text {
 		line-height: normal;
 	}

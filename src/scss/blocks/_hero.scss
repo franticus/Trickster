@@ -12,7 +12,7 @@
 		background-color: var(--accent);
 		background-color: #999;
 		background-image: url('../../img/hero/hero.jpg');
-		background-position: center center;
+		background-position: center bottom;
 		background-size: cover;
 		background-repeat: no-repeat;
 
@@ -45,6 +45,10 @@
 			@include mobile {
 				font-size: 12px;
 			}
+		}
+
+		&-text:nth-child(3) {
+			margin-right: 10px;
 		}
 
 		&-left {
@@ -114,7 +118,9 @@
 		text-align: center;
 		color: #fff;
 		color: var(--text-color);
+		margin: 0 auto;
 		margin-bottom: 80px;
+		max-width: 1300px;
 
 		@include tablet {
 			font-size: 80px;
@@ -137,5 +143,10 @@
 		text-align: center;
 		color: var(--text-color);
 		margin-bottom: 30px;
+
+		@include mobile {
+			margin-bottom: 20px;
+			max-width: 270px;
+		}
 	}
 }
