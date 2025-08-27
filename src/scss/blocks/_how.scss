@@ -129,6 +129,10 @@
 					@include tablet {
 						font-size: 30px;
 					}
+
+					@include mobile {
+						margin-top: 4px;
+					}
 				}
 
 				&__description {
